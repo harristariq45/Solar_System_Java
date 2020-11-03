@@ -1,2 +1,2 @@
-# Week2-Solar-System
-week2 labs
+# Scc212-Solar-System
+Week 1 lab
