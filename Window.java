@@ -29,17 +29,15 @@ public class Window extends SolarSystem
 
         while(true)
         {
-            // drawSolarObject(0,0,60,"YELLOW");
-
-            // Planets[] planets = {new Sun()}
-
-            new Sun();
-            int x = movement; 
+            drawSolarObject(0,0,60,"YELLOW");
+            int x = movement;
             movement = movement+1;
             drawSolarObject(150,x,15,"BLUE");
             drawSolarObjectAbout(150,x,10,"GREY",20,x*2);
             drawSolarObject(90,x,15,"CYAN");
+            // Planets Neptune = new Planets(600,x,20,"GREEN" );
             finishedDrawing();
+
         }
 
     }
@@ -54,3 +52,9 @@ public static void main( String[] args){
 
 }
 
+         // drawSolarObject(0,0,60,"YELLOW");
+
+            // Planets[] Solarplanets = new Planets[10];
+        // Planets Sun = new Sun();
+
+            // Solarplanets[1] = new Sun();
