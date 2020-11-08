@@ -32,10 +32,10 @@ public class Window extends SolarSystem
             drawSolarObject(0,0,60,"YELLOW");
             int x = movement;
             movement = movement+1;
-            drawSolarObject(150,x,15,"BLUE");
-            drawSolarObjectAbout(150,x,10,"GREY",20,x*2);
-            drawSolarObject(90,x,15,"CYAN");
-            // Planets Neptune = new Planets(600,x,20,"GREEN" );
+            Solarplanet Venus = new Solarplanet(90,2,15,"CYAN");
+            // drawSolarObject(150,x,15,"BLUE");
+            // drawSolarObjectAbout(150,x,10,"GREY",20,x*2);
+            // drawSolarObject(90,x,15,"CYAN");
             finishedDrawing();
 
         }

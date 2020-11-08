@@ -1,21 +1,19 @@
-public class Planets extends Window
-{
+public class Planets
+{  
+    public double distance;
+    public double angle;
+    public double diameter;
+    public String col;
 
-    @Override
-    public void drawSolarObject(double distance, double angle, double diameter, String col) {
-        // TODO Auto-generated method stub
-        super.drawSolarObject(distance, angle, diameter, col);
+    public void SolarPlanet(double distanceM, double angleM, double diameterM, String colM)
+    {
+        distance = distanceM;
+        angle = angleM;
+        diameter = diameterM;
+        col = colM;
 
+        drawSolarObject(distance, angle, diameter, col);
     }
-
-    
-
-
-
-
-
-
-
 
 
 
