@@ -7,11 +7,12 @@ import java.util.*;
 
 public class SolarObject 
 {
-    public int distance;
-    public double angle;
-    public int diameter;
-    public String col;
-    // public Color col;
+    private int distance;
+    protected double angle;
+    private int diameter;
+    private String col;
+    // private double centreOfRotationDistance; 
+    // private double centreOfRotationAngle;
 
     public SolarObject(int x, double y, int diameter, String col)
     {
@@ -21,11 +22,6 @@ public class SolarObject
         this.col = col;
     }
 
-    public void Planet(SolarSystem a)
-    {
-        a.drawSolarObject(this.diameter, this.angle, diameter, col);
-        
-    }
     public double getAngle()
     {
         return angle;
@@ -34,11 +30,6 @@ public class SolarObject
     public String getCol()
     {
         return col;
-    }
-
-    public void move(double speed)
-    {
-        angle=angle+speed;
     }
 
     public double getDistance()
@@ -50,37 +41,24 @@ public class SolarObject
     {
         return diameter;
     }
+
+    public void move(double speed)
+    {
+        angle=angle+speed;
+    }
+
+
 }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // public void Planet(SolarSystem a)
+    // {
+    //     a.drawSolarObject(this.diameter, this.angle, diameter, col);
+        
+    // }
 
 
 
@@ -101,29 +79,6 @@ public class SolarObject
 //         this.col= col;
 //     }
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // public class Planets

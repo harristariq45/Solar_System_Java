@@ -9,14 +9,28 @@ import java.util.*;
  * THIS CLASS CREATES AN INSTANCE OF THE OBJECT SOLAR SYSTEM
  */
 
-public class Window extends SolarSystem
+public class Window
 {
 
     private static SolarSystem SolarSystem;
+
+    SolarSystem galaxy = new SolarSystem(1100, 1100) ;
+
     int movement=0;
     int x = movement;
-    SolarObject earth = new SolarObject(150,0,15,"BLUE");
-    SolarObject[] asteroids = new SolarObject[200];
+
+    SolarObject Sun = new SolarObject(0,0,70,"YELLOW");
+    SolarObject Mercury = new SolarObject(80,0,15,"GREEN");
+    SolarObject Venus = new SolarObject(130,2,15,"CYAN");
+    SolarObject Earth = new SolarObject(180,0,30,"BLUE");
+    SolarObject Mars = new SolarObject(260,0,35,"ORANGE");
+    SolarObject Jupiter = new SolarObject(460,0,50,"GREY");
+
+    //SolarObject Saturn = new SolarObject(350,0,15,"BLUE");
+
+    Moon moon = new Moon(35,0,10,"LIGHT_GREY",20,0);
+
+    Moon[] asteroids = new Moon[200];
 
 /**
  * creates a window of the solar system
@@ -27,32 +41,34 @@ public class Window extends SolarSystem
  */
     public Window()
     {
-
-        super(1000,1000);
-
-       // super = a;
-
-        // int movement=0;
-        // SolarObject earth = new SolarObject(150,x,15,"BLUE");
+        // super(1100,1100);
 
         while(true)
         {
-            drawSolarObject(0,0,60,"YELLOW");
-            drawSolarObject(earth.getDistance(),earth.getAngle(), earth.getDiameter(), earth.getCol());
-        
-            earth.move(1);
-            // earth = drawSolarObject(150,x,15,"BLUE");
-            
-            // e.Planet(super);
+            // galaxy.drawSolarObject(0,0,70,"YELLOW");
+            galaxy.drawSolarObject(Sun.getDistance(),Sun.getAngle(), Sun.getDiameter(), Sun.getCol());
+            galaxy.drawSolarObject(Mercury.getDistance(),Mercury.getAngle(), Mercury.getDiameter(), Mercury.getCol());
+            galaxy.drawSolarObject(Mercury.getDistance(),Mercury.getAngle(), Mercury.getDiameter(), Mercury.getCol());
+            galaxy.drawSolarObject(Venus.getDistance(),Venus.getAngle(), Venus.getDiameter(), Venus.getCol());
+            galaxy.drawSolarObject(Earth.getDistance(),Earth.getAngle(), Earth.getDiameter(), Earth.getCol());
+            galaxy.drawSolarObject(Mars.getDistance(),Mars.getAngle(), Mars.getDiameter(), Mars.getCol());
+            galaxy.drawSolarObject(Jupiter.getDistance(),Jupiter.getAngle(), Jupiter.getDiameter(), Jupiter.getCol());
+            // drawSolarObject(Saturn.getDistance(),Saturn.getAngle(), Saturn.getDiameter(), Saturn.getCol());
 
-            // Solarplanet Venus = new Solarplanet(90,2,15,"CYAN");
-            // drawSolarObject(150,x,15,"BLUE");
-            // drawSolarObjectAbout(150,x,10,"GREY",20,x*2);
-            // drawSolarObject(90,x,15,"CYAN");
-            finishedDrawing();
+            galaxy.drawSolarObjectAbout(moon.getDistance(),moon.getAngle(), moon.getDiameter(), moon.getCol(), moon.getcentreOfRotationDistance(), moon.getcentreOfRotationAngle()); //earth's moon
+            
+            Mercury.move(1.5);
+            Venus.move(1.2);
+            Earth.move(1.1);
+            Mars.move(1);
+            Jupiter.move(0.7);
+            moon.moveMoon(2,Earth.getDistance(),Earth.getAngle());
+            // Saturn.move(1);
+
+            
+            galaxy.finishedDrawing();
 
         }
-
     }
 
 
@@ -64,9 +80,15 @@ public static void main( String[] args){
 
 }
 
-         // drawSolarObject(0,0,60,"YELLOW");
+// drawSolarObjectAbout(150,x,10,"GREY",20,x*2); //earth's moon
 
-            // Planets[] Solarplanets = new Planets[10];
-        // Planets Sun = new Sun();
+// drawSolarObject(0,0,60,"YELLOW");
 
-            // Solarplanets[1] = new Sun();
+// Planets[] Solarplanets = new Planets[10];
+// Planets Sun = new Sun();
+
+// Solarplanets[1] = new Sun();
+
+// earth = drawSolarObject(150,x,15,"BLUE");
+
+// e.Planet(super);
